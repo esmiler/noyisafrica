@@ -1,0 +1,20 @@
+# Noyis Africa
+
+> Premium Caribbean natural wellness and herbal health hub in St. John's, Antigua & Barbuda. Offers three signature Treasure herbal formulas (EC$40 each) with WhatsApp ordering.
+
+Noyis Africa crafts premium Caribbean wellness formulas from natural herbs. The shop is located in the Neverland Building on Lower Nevis Street in St. John's, Antigua & Barbuda, open daily 9:00 AM – 6:00 PM. Orders are placed via WhatsApp at +1 (268) 770-0171.
+
+## Pages
+
+- [Home](/): Overview of Noyis Africa, the Treasure product collection, location, and FAQs.
+
+## Products
+
+- [Treasure Man](/#products): Male vitality and stamina herbal formula — EC$40.
+- [Treasure Woman](/#products): Hormonal balance and metabolic wellness formula — EC$40.
+- [Treasure Herbs](/#products): Broad-spectrum immune, digestive, and detox formula — EC$40.
+
+## Optional
+
+- [Location](/#location): Neverland Building, Lower Nevis Street, St. John's, Antigua.
+- [FAQs](/#faqs): Ordering, pricing, opening hours, and product benefits.
