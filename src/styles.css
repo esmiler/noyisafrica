@@ -33,46 +33,46 @@
   --color-ring: var(--ring);
   --color-cream: var(--cream);
   --color-earth: var(--earth);
-  --font-display: "Fraunces", Georgia, serif;
-  --font-sans: "Inter", system-ui, sans-serif;
+  --font-display: "Cormorant Garamond", "Playfair Display", Georgia, serif;
+  --font-sans: "Montserrat", "Inter", system-ui, sans-serif;
 }
 
 :root {
-  --radius: 0.75rem;
-  /* Cream / paper background */
-  --background: oklch(0.98 0.012 85);
-  --foreground: oklch(0.22 0.04 150);
+  --radius: 0.5rem;
+  /* Soft Pearl Sand */
+  --background: #FDFBF7;
+  --foreground: #121212;
 
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.22 0.04 150);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.22 0.04 150);
+  --card: #FFFFFF;
+  --card-foreground: #121212;
+  --popover: #FFFFFF;
+  --popover-foreground: #121212;
 
-  /* Deep forest green */
-  --primary: oklch(0.34 0.07 155);
-  --primary-foreground: oklch(0.98 0.012 85);
-  --primary-deep: oklch(0.24 0.06 155);
+  /* Deep Royal Malachite */
+  --primary: #0A2F1D;
+  --primary-foreground: #FDFBF7;
+  --primary-deep: #061A10;
 
-  /* Warm earth / sand */
-  --secondary: oklch(0.93 0.025 80);
-  --secondary-foreground: oklch(0.28 0.05 155);
+  /* Onyx */
+  --secondary: #F2EFE8;
+  --secondary-foreground: #121212;
 
-  --muted: oklch(0.95 0.018 85);
-  --muted-foreground: oklch(0.45 0.025 140);
+  --muted: #F4F1EA;
+  --muted-foreground: #5A5A5A;
 
-  /* Warm terracotta accent */
-  --accent: oklch(0.66 0.14 50);
-  --accent-foreground: oklch(0.99 0.01 85);
+  /* Burnished Gold */
+  --accent: #D4AF37;
+  --accent-foreground: #121212;
 
   --destructive: oklch(0.58 0.22 27);
-  --destructive-foreground: oklch(0.99 0 0);
+  --destructive-foreground: #FFFFFF;
 
-  --border: oklch(0.88 0.02 90);
-  --input: oklch(0.9 0.02 90);
-  --ring: oklch(0.34 0.07 155);
+  --border: #E6E1D6;
+  --input: #E6E1D6;
+  --ring: #D4AF37;
 
-  --cream: oklch(0.96 0.022 85);
-  --earth: oklch(0.55 0.08 60);
+  --cream: #FDFBF7;
+  --earth: #121212;
 }
 
 @layer base {
