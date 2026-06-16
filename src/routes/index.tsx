@@ -88,12 +88,12 @@ const GOALS = [
   { id: "immune", label: "Immunity, digestion & detox", recommends: "treasure-herbs" },
 ];
 
-const jsonLd = {
+const localBusinessLd = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   name: "Noyis Africa",
   description: "Premium Caribbean natural wellness and herbal health hub offering Treasure Man, Treasure Woman, and Treasure Herbs formulas.",
-  image: "https://noyisafrica.com/hero.jpg",
+  image: "https://noyisafricaantigua.lovable.app/hero.jpg",
   telephone: ["+1-268-770-0171", "+1-268-719-2579", "+1-268-721-0101"],
   priceRange: "EC$40",
   address: {
@@ -120,18 +120,44 @@ const jsonLd = {
   },
 };
 
+const productsLd = {
+  "@context": "https://schema.org",
+  "@graph": PRODUCTS.map(p => ({
+    "@type": "Product",
+    name: p.name,
+    description: `${p.tagline}. ${p.benefits.join(". ")}.`,
+    brand: { "@type": "Brand", name: "Noyis Africa" },
+    offers: {
+      "@type": "Offer",
+      price: "40.00",
+      priceCurrency: "XCD",
+      availability: "https://schema.org/InStock",
+      url: "https://noyisafricaantigua.lovable.app/#products",
+    },
+  })),
+};
+
+const faqLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: FAQS.map(f => ({
+    "@type": "Question",
+    name: f.q,
+    acceptedAnswer: { "@type": "Answer", text: f.a },
+  })),
+};
+
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Noyis Africa — Premium Caribbean Herbal Wellness | St. John's, Antigua" },
       { name: "description", content: "Antigua natural remedies & St. John's herbal medicine. Premium Treasure formulas — order via WhatsApp from Noyis Africa, Neverland Building." },
-      { property: "og:title", content: "Noyis Africa — Your Health, Our Priority" },
-      { property: "og:description", content: "Premium Caribbean wellness formulas. Treasure Man, Treasure Woman & Treasure Herbs — EC$40 per bottle." },
-      { property: "og:url", content: "/" },
+      { property: "og:url", content: "https://noyisafricaantigua.lovable.app/" },
     ],
-    links: [{ rel: "canonical", href: "/" }],
+    links: [{ rel: "canonical", href: "https://noyisafricaantigua.lovable.app/" }],
     scripts: [
-      { type: "application/ld+json", children: JSON.stringify(jsonLd) },
+      { type: "application/ld+json", children: JSON.stringify(localBusinessLd) },
+      { type: "application/ld+json", children: JSON.stringify(productsLd) },
+      { type: "application/ld+json", children: JSON.stringify(faqLd) },
     ],
   }),
   component: Index,
@@ -224,8 +250,8 @@ function Hero() {
             <Sparkles className="h-3.5 w-3.5" /> St. John's · Antigua & Barbuda
           </span>
           <h1 className="mt-6 font-display text-5xl font-bold leading-[1.05] sm:text-6xl lg:text-7xl">
-            Your Health,<br />
-            <span className="italic text-[oklch(0.88_0.09_85)]">Our Priority.</span>
+            Premium Caribbean<br />
+            <span className="italic text-[oklch(0.88_0.09_85)]">Herbal Wellness.</span>
           </h1>
           <p className="mt-6 max-w-xl text-lg text-primary-foreground/85 sm:text-xl">
             Premium Caribbean wellness formulas crafted from nature's most powerful herbs.
@@ -259,6 +285,7 @@ function Hero() {
             alt="Fresh Caribbean herbs and amber herbal tincture bottles — Noyis Africa premium wellness"
             width={1536}
             height={1024}
+            fetchPriority="high"
             className="relative aspect-[4/5] w-full rounded-3xl object-cover shadow-2xl ring-1 ring-primary-foreground/20"
           />
         </div>
@@ -520,13 +547,13 @@ function Footer() {
           </p>
         </div>
         <div>
-          <h4 className="font-display text-sm font-semibold uppercase tracking-widest text-[oklch(0.85_0.1_85)]">Visit</h4>
+          <h3 className="font-display text-sm font-semibold uppercase tracking-widest text-[oklch(0.85_0.1_85)]">Visit</h3>
           <p className="mt-3 text-sm text-primary-foreground/80">
             Neverland Building<br />Lower Nevis Street<br />St. John's, Antigua & Barbuda
           </p>
         </div>
         <div>
-          <h4 className="font-display text-sm font-semibold uppercase tracking-widest text-[oklch(0.85_0.1_85)]">Contact</h4>
+          <h3 className="font-display text-sm font-semibold uppercase tracking-widest text-[oklch(0.85_0.1_85)]">Contact</h3>
           <div className="mt-3 space-y-1 text-sm text-primary-foreground/80">
             <div>+1 (268) 770-0171</div>
             <div>+1 (268) 719-2579</div>
